@@ -182,6 +182,9 @@ if(USE_VALGRIND)
   target_link_libraries(flow_sampling PUBLIC Valgrind)
 endif()
 
+target_link_libraries(flow PUBLIC jemalloc)
+target_link_libraries(flow_sampling PUBLIC jemalloc)
+
 if(APPLE)
   find_library(IO_KIT IOKit)
   find_library(CORE_FOUNDATION CoreFoundation)
